@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style type="text/css">
+html,
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Scale canvas with resize attribute to full size */
+canvas[resize] {
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+
+
+<!-- 
+
+GRAPH ANIM
+
+state
+  graph 
+     vertex : position, label, size, labelsize, shape, outercolor, innercolor
+	 edge : color, label, labelsize, color2, color2pct
+
+
+-->
+
+
+
+<script type="text/javascript" src="https://unpkg.com/acorn"></script>
+<script type="text/javascript" src="paper/dist/paper-full.js"></script>
+<!-- Define inlined PaperScript associate it with myCanvas -->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/paperscript" canvas="myCanvas">
+		
+		
+		box_x = 100;
+		box_y = 500;
+		scalex = 500;
+		scaley = 250;
+		
+		class Triangle
+		{
+			constructor(name, m, w, h)
+			{
+				this.name = name;
+				this.m = m;
+				this.w = w;
+				this.h = h;
+				this.createPath();
+				this.textbox = null;
+				
+				this.textbox_name = null;
+			}
+			
+			
+			getPoints()
+			{
+				var arr = [new Point(box_x + (this.m - this.w) * scalex, box_y), 
+							new Point(box_x + (this.m) * scalex, box_y - this.h * scaley), 
+							new Point(box_x + (this.m + this.w) * scalex, box_y), 
+							new Point(box_x + (this.m) * scalex, box_y) ];
+				return arr;
+			}
+			
+			movePoint(pointindex, dx, dy)
+			{
+				//bottomleft
+				if (pointindex == 0)
+				{
+					this.w = this.w - parseFloat(dx) / parseFloat(scalex);
+					
+				}
+				//bottomright
+				else if (pointindex == 2)
+				{
+					this.w = this.w + parseFloat(dx) / parseFloat(scalex);
+					
+				}
+				//apex / bottom mid
+				else if (pointindex == 1 || pointindex == 3)
+				{
+					this.m = this.m + parseFloat(dx) / parseFloat(scalex);
+					
+					if (pointindex == 1)
+					{
+						this.h = this.h - parseFloat(dy) / parseFloat(scaley);
+					}
+				
+				}
+				
+				this.w = Math.max(0, this.w);
+				this.w = Math.min(1, this.w);
+				
+				this.m = Math.max(0, this.m);
+				this.m = Math.min(1, this.m);
+				
+				this.h = Math.max(-1, this.h);
+				this.h = Math.min(1, this.h);
+				
+				
+				var pts = this.getPoints();
+				
+				for (var i = 0; i < this.path.segments.length; i++)
+				{
+					this.path.segments[i].point.x = pts[i].x;
+					this.path.segments[i].point.y = pts[i].y;
+				}
+				
+				this.updateText();
+			}
+			
+			
+			createPath()
+			{
+				this.path = new Path();
+					
+				var pts = this.getPoints();
+				
+				
+				for (var point of pts)
+					this.path.add(point);
+				
+				this.path.closed = true;
+
+				this.path.fillColor = 'rgba(98, 178, 177, 1)';
+				this.path.blendMode = 'multiply';
+				this.path.selected = true;
+				
+				
+			}
+			
+			
+			setFillColor(r, g, b, a)
+			{
+				this.path.fillColor = 'rgba(' + r.toString() + ', ' + g.toString() + ', ' + b.toString() + ', ' + a.toString() + ')';
+			}
+			
+			
+			
+			
+			
+			createTextbox(offsetx, offsety)
+			{
+				this.textbox = new PointText(new Point(offsetx, offsety));
+				this.textbox.justification = 'left';
+				this.textbox.fontSize = 16;
+				
+				
+				this.updateText();
+				//text.position.y += text.bounds.height/4 + 1;	//why not /2 ?  IDK!
+			
+			}
+			
+			
+			updateNameTextbox()
+			{
+				if (!this.textbox_name)
+				{
+				
+					this.textbox_name = new PointText( new Point(10, 10) );
+					this.textbox_name.justification = 'left';
+					this.textbox_name.fontSize = 10;
+					this.textbox_name.content = this.name;
+				}
+				
+				this.textbox_name.point.x = box_x + this.m * scalex - 5;
+				this.textbox_name.point.y = box_y - this.h * scaley - 8;
+				
+			
+			}
+			
+			updateText()
+			{
+				if (this.textbox != null)
+				{
+					this.textbox.content = this.name + ": " + "m = " + this.m.toFixed(5) + "  w = " + this.w.toFixed(5) + "  h = " + this.h.toFixed(5);
+				}
+			}
+			
+			
+			
+
+		}
+
+
+		function getFateProbs(dict)
+		{
+			var exp_C = { "ig_a" : 1, "ig_b" : 1, "ia_g" : 1, "ib_g" : 1, 
+						  "ia_plus_b_g" : 1/2, 
+						  "pa" : 0, "pb" : 0 };
+			var exp_Na = { "ig_a" : 0, "ig_b" : 1, "ia_g" : 0, "ib_g" : 1, 
+						  "ia_plus_b_g" : 1/2, 
+						  "pa" : 0, "pb" : 0 };	
+			var exp_Nb = { "ig_a" : 1, "ig_b" : 0, "ia_g" : 1, "ib_g" : 0, 
+						  "ia_plus_b_g" : 1/2, 
+						  "pa" : 0, "pb" : 0 };
+			var exp_Sp = { "ig_a" : 0, "ig_b" : 0, "ia_g" : 0, "ib_g" : 0, 
+						  "ia_plus_b_g" : 0, 
+						  "pa" : 0, "pb" : 0 };
+			var exp_Sub = { "ia_g" : 1, "ib_g" : 1, "ig_a" : 1/2, "ig_b" : 1/2, 
+						  "ig_a_plus_b" : 1, "ia_plus_b_g" : 1,  
+						  "pa" : 0, "pb" : 0 };
+			var exp_Pa = { "pa" : 1, "pb" : 0 };
+			var exp_Pb = { "pa" : 0, "pb" : 1 };
+			
+			
+			var exp_Pboth = { "pa" : 1, "pb" : 1 };
+			
+			var allexp = {"C" : exp_C, "Na" : exp_Na, "Nb" : exp_Nb, 
+						  "Sp" : exp_Sp, "Sub" : exp_Sub, "Pa" : exp_Pa, "Pb" : exp_Pb, "Pboth" : exp_Pboth };
+			
+			var probs = {};
+			for (var allexp_key of Object.keys(allexp))
+			{
+				var expvals = allexp[allexp_key];
+				
+				var prob = 1.0;
+				
+				for (var key of Object.keys(expvals))
+				{
+					var exp = expvals[key];
+					
+					
+					var actual_val = parseFloat(dict[key]);
+					
+					var threshold_01 = 0.9;
+					var threshold_half = 0.1;
+					
+					//that was me testing some logistic function
+					/*if (exp == 1 || exp == 0)
+					{
+					console.log("exp=" + exp + " key=" + key);
+					console.log(key + "=" + actual_val);
+					actual_val = 2/(1 + Math.pow(e, -1 * k * (actual_val))) - 1;
+					console.log("AFTER=" + actual_val);
+					}*/
+					//console.log(key + " exp=" + exp.toString() + " actual=" + actual_val.toString());
+					
+					
+					
+					var postval = actual_val;
+					
+					if (exp == 1)
+					{
+						if (postval >= threshold_01)
+							postval = 1;
+						else if (postval <= 0.1)
+							postval = 0;
+						else 
+							postval = 1/threshold_01 * postval;
+						
+						console.log("fate=" + allexp_key + "  key=" + key + "  exp=" + exp + "  act=" + actual_val + "  post=" + postval);
+						
+						prob *= postval;
+						
+					}
+					else if (exp == 0)
+					{
+						postval = 1 - actual_val;
+						if (postval >= threshold_01)
+							postval = 1;
+						else 
+							postval = 1/threshold_01 * postval;
+					
+						console.log("fate=" + allexp_key + "  key=" + key + "  exp=" + exp + "  act=" + actual_val + "  post=" + postval);
+					
+						prob *= postval;
+						
+					}
+					else if (exp == 1/2)
+					{
+						var factor = 0;
+						if (Math.abs(postval - 1/2) <= threshold_half)
+							factor = 1;
+						else if (postval < 1/2)
+							factor = 1/(1/2 - threshold_half) * postval;
+						else 
+							factor = 1/(threshold_half - 1/2) * postval + 1 - ((threshold_half + 1/2)/(threshold_half - 1/2));
+						
+						
+						console.log("fate=" + allexp_key + "  key=" + key + "  exp=" + exp + "  act=" + actual_val + "  post=" + postval + "  factor=" + factor + "   dif=" + Math.abs(postval - 1/2)); 
+						prob *= factor;
+						
+					}
+				}
+				
+				probs[allexp_key] = prob;
+				
+			}
+			
+			probs["Pone"] = probs["Pa"] + probs["Pb"]
+			
+			return probs;
+						  
+						  
+		}
+
+		
+		
+		
+		var textbox_params = null;
+		function updateFunctionData()
+		{
+			if (!textbox_params)
+			{
+				textbox_params = new PointText(new Point(500, 100));
+			}
+			
+			var tcalc_url = 'tcalc.php?mg=' + tg.m + '&hg=' + tg.h + '&wg=' + tg.w + 
+						    '&ma=' + ta.m + '&ha=' + ta.h + '&wa=' + ta.w + 
+							'&mb=' + tb.m + '&hb=' + tb.h + '&wb=' + tb.w;
+							
+			console.log("tcalc_url=" + tcalc_url);
+			
+			jQuery.ajax({
+  
+                // Our sample url to make request 
+                url: tcalc_url, 
+  
+                // Type of Request
+                type: "GET",
+  
+                // Function to call when to
+                // request is ok 
+                success: function (data) {
+					var lines = data.replace('\r', '').split('\n');
+					
+					var dict = {};
+					for (var line of lines)
+					{
+						var pz = line.split('=');
+						if (pz.length == 2)
+						{
+							dict[ pz[0] ] = pz[1];
+						}
+					}
+					
+					var str = "";
+					for (key of Object.keys(dict))
+					{
+						if (key == "cmd")
+							console.log("cmd=" + dict[key]);
+						else {
+							//if (key[0] != "P" && key[1] != "_")
+							
+								str += key + ": " + dict[key] + "\n";
+						}
+						
+						
+					}
+					
+					str += "\n";
+					
+					str += "Locally computed probs\n";
+					var probs = getFateProbs(dict);
+					
+					for (key of Object.keys(probs))
+					{
+						str += key + ": " + probs[key].toFixed(5) + "\n";
+					}
+					
+					
+					textbox_params.content = str;
+					
+                },
+  
+                // Error handling 
+                error: function (error) {
+                    console.log(`Error ${error}`);
+                }
+            });
+		
+		}
+		
+		
+		
+		
+		
+		
+		var selectedTriangle = null;
+		var selectedPointIndex = -1;
+		
+		
+		function onMouseDown(e) {
+			
+			var triangles = [tg, ta, tb]; 
+			var mousetolerance = 10;
+			
+			for (var t of triangles)
+			{
+			
+				if (selectedTriangle)
+				{
+					break;
+				}	
+					
+					
+				var segs = t.path.getSegments();
+			
+
+				var minp_dist = 999999; 
+			
+				for (var i = 0; i < segs.length; i++)
+				{
+					var p = segs[i].point;
+					
+					var distx = Math.abs( p.x - e.point.x )
+					var disty = Math.abs( p.y - e.point.y );
+					
+					if ( distx <= mousetolerance && disty <= mousetolerance)
+					{
+						var dist = Math.sqrt( distx * distx + disty * disty );
+						
+						if (dist < minp_dist)
+						{
+							selectedTriangle = t;
+							selectedPointIndex = i;
+							minp_dist = dist;
+						}
+					}
+				}
+			}
+			
+		
+		}
+		
+		
+		function onMouseDrag(event) {
+			
+			if (selectedTriangle != null)
+			{
+				selectedTriangle.movePoint(selectedPointIndex, event.delta.x, event.delta.y);
+				
+				paper.view.draw();
+				
+				selectedTriangle.updateNameTextbox();
+			}
+			
+			
+        };
+
+        function onMouseUp(event) {
+		
+			if (selectedTriangle)
+			{
+				selectedTriangle = null;
+				selectedPointIndex = -1;
+				updateFunctionData();
+			}
+        };
+		
+		tg = new Triangle("tg", 0.4, 0.098, 1);
+		tg.createTextbox(20, 30);
+		tg.setFillColor(255, 0, 0, 0.6);
+		tg.updateNameTextbox();
+		
+		ta = new Triangle("ta", 0.5, 0.1, 1);
+		ta.createTextbox(20, 60);
+		ta.setFillColor(0, 255, 0, 0.6);
+		ta.updateNameTextbox();
+		
+		tb = new Triangle("tb", 0.7, 0.05, 0.8);
+		tb.createTextbox(20, 90);
+		tb.setFillColor(0, 0, 255, 0.6);
+		tb.updateNameTextbox();
+		
+		updateFunctionData();
+		//t.placeElements();
+	
+</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize></canvas>
+</body>
+</html>

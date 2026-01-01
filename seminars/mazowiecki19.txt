@@ -1,0 +1,14 @@
+The Reachability Problem for Petri Nets is Not Elementary
+
+Petri nets, also known as vector addition systems, are a long 
+established and widely used model of concurrent processes. The 
+complexity of their reachability problem is one of the most prominent 
+open questions in the theory of verification. That the reachability 
+problem is decidable was established by Mayr in his seminal STOC 1981 
+work, and the currently best published upper bound is the non-primitive 
+recursive Ackermannian bound of Leroux and Schmitz from LICS 2019. We 
+show that the reachability problem is not elementary. Until this work, 
+the best lower bound has been exponential space, due to Lipton in 1976.
+
+Joint work with Wojciech Czerwiński, Sławomir Lasota, Ranko Lazić and 
+Jérôme Leroux.
