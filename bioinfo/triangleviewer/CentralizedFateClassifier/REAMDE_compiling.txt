@@ -1,2 +1,0 @@
-On Unix, run
-g++ CentralizedFateClassifier.cpp GeneTreeConstructor.h probabilitiescalculation.h -std=c++11 -o CentralizedFateClassifier
