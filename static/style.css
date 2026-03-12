@@ -421,16 +421,12 @@ ul {
     margin-top: 1.5rem;
   }
 
-  .menu__dropdown a {
-    font-size: 0.75em;
-  }
-
   .menu__dropdown > li:not(:last-of-type) {
     margin-bottom: 0px !important;
   }
   .menu__dropdown > li a {
       white-space: nowrap;
-      padding: 0px 5px;
+      padding: 1px 2px;
   }
 }
 
@@ -443,6 +439,10 @@ li.area-bio, li.area-formal, li.area-quantum {
   padding-left: 8px;
   list-style: none;
   margin-left: -0.75rem;
+}
+
+.area-label {
+  white-space: nowrap;
 }
 
 .dot {

@@ -1,4 +1,4 @@
-main-description: "The GRIF is the fundamental computer science research group at the Université de Sherbrooke. Our members work at the intersection of theoretical computer science and its applications in <span class='dot dot-bio'></span>bioinformatics, <span class='dot dot-formal'></span>formal methods and <span class='dot dot-quantum'></span>quantum computing."
+main-description: "The GRIF is the fundamental computer science research group at the Université de Sherbrooke. Our members work at the intersection of theoretical computer science and its applications in <span class='area-label'><span class='dot dot-bio'></span>bioinformatics,</span> <span class='area-label'><span class='dot dot-formal'></span>formal methods</span> and <span class='area-label'><span class='dot dot-quantum'></span>quantum computing.</span>"
 
 members: "Members"
 professors: "Professors"
