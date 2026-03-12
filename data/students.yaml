@@ -42,3 +42,13 @@
   lastname: "Chabot Provencher"
   role: "bsc"
   advisor: "Dave Touchette + Cunlu Zhou"
+
+- firstname: "Eliott"
+  lastname: "Texier"
+  role: "bsc"
+  advisor: "Michael Blondin"
+
+- firstname: "Pierre-Étienne"
+  lastname: "Brindle"
+  role: "bsc"
+  advisor: "Dave Touchette"
