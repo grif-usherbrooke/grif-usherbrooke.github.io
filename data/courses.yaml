@@ -22,6 +22,9 @@
 - name: "IFT606 – Sécurité et cryptographie"
   url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT606/"
 
+- name: "IFQ701 – Algorithmes quantiques"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFQ701/"
+
 - name: "BIN702 – Algorithmes pour la bio-informatique"
   url: "https://www.usherbrooke.ca/admission/fiches-cours/BIN702/"
 
