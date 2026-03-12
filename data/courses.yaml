@@ -10,14 +10,14 @@
 - name: "IFT436 – Algorithmes et structures de données"
   url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT436/"
 
-- name: "IFT503/IFT711 – Théorie du calcul"
-  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT503/"
-
 - name: "IGL501/IGL710 – Méthodes formelles en génie logiciel"
   url: "https://www.usherbrooke.ca/admission/fiches-cours/IGL710/"
 
 - name: "IGL502/IGL752 – Techniques de vérification et de validation"
   url: "https://www.usherbrooke.ca/admission/fiches-cours/IGL752/"
+
+- name: "IFT503/IFT711 – Théorie du calcul"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT503/"
 
 - name: "IFT606 – Sécurité et cryptographie"
   url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT606/"
