@@ -420,6 +420,18 @@ ul {
   .content {
     margin-top: 1.5rem;
   }
+
+  .menu__dropdown a {
+    font-size: 0.75em;
+  }
+
+  .menu__dropdown > li:not(:last-of-type) {
+    margin-bottom: 0px !important;
+  }
+  .menu__dropdown > li a {
+      white-space: nowrap;
+      padding: 0px 5px;
+  }
 }
 
 /* Research areas */

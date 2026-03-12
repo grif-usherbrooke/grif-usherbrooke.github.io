@@ -21,7 +21,7 @@ title = "GRIF"
      weight = 1
 
     [[languages.en.menu.main]]
-      name = "Research themes"
+      name = "Research areas"
       url = "#themes"
       weight = 2
 
@@ -51,7 +51,7 @@ title = "GRIF"
      weight = 1
 
     [[languages.fr.menu.main]]
-      name = "Thèmes de recherche"
+      name = "Axes de recherche"
       url = "#themes"
       weight = 2
 
