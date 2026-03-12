@@ -423,9 +423,15 @@ ul {
 }
 
 /* Research areas */
-li.area-bio     { border-left: 4px solid var(--color-bio);     padding-left: 8px; list-style: none;}
-li.area-formal  { border-left: 4px solid var(--color-formal);  padding-left: 8px; list-style: none;}
-li.area-quantum { border-left: 4px solid var(--color-quantum); padding-left: 8px; list-style: none;}
+li.area-bio     { border-left: 4px solid var(--color-bio);}
+li.area-formal  { border-left: 4px solid var(--color-formal);}
+li.area-quantum { border-left: 4px solid var(--color-quantum);}
+
+li.area-bio, li.area-formal, li.area-quantum {
+  padding-left: 8px;
+  list-style: none;
+  margin-left: -0.75rem;
+}
 
 .dot {
   display: inline-block;
