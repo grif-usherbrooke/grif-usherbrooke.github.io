@@ -1,4 +1,4 @@
-baseURL = "https://grif-usherbrooke.github.io/"
+baseURL = "https://grif-usherbrooke.github.io"
 theme = "terminal"
 defaultContentLanguageInSubdir = true
 defaultContentLanguage = "en"
