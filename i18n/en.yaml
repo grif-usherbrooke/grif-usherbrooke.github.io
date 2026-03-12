@@ -5,7 +5,7 @@ professors: "Professors"
 postdoc: "Postdocs"
 phd: "PhD students"
 msc: "Master's students"
-bsc: "Undergraduate students"
+bsc: "Undergraduate interns"
 supervised_by: "advisor:"
 
 themes: "Research themes"
