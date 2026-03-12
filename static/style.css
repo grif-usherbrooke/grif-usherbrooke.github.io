@@ -407,3 +407,10 @@ h2 + h3, h2 + ul, h3 + ul {
 .container {
   max-width: 1205px;
 }
+
+/* Header tweak on mobile */
+@media (max-width: 684px) {
+  .content {
+    margin-top: 1.5rem;
+  }
+}
