@@ -2,19 +2,22 @@
 
   {{ $lang := .Site.Language.Lang }}
 
-  <div>{{ i18n "main-description" }}</div>
+  <div>{{ i18n "main-description" | safeHTML }}</div>
 
   {{ $profs := index .Site.Data $lang "prof" }}
   {{ $profs = sort $profs "lastname" }}
+  {{ $profs = sort $profs "area" }}
   {{ $students := .Site.Data.students }}
 
   <h2 id="members">{{ i18n "members" }}</h2>
-  
+
   {{ if $profs }}
     <h3>{{ i18n "professors" }}</h3>
     <ul>
       {{ range $profs }}
-        <li><a href="{{ .url }}">{{ .firstname }} {{ .lastname }}</a> — {{ .expertise  | markdownify}}</li>
+      <li{{ if .area }} class="area-{{ .area }}"{{ end }}>
+	<a href="{{ .url }}">{{ .firstname }} {{ .lastname }}</a> — {{ .expertise | markdownify }}
+      </li>
       {{ end }}
     </ul>
   {{ end }}
@@ -23,16 +26,17 @@
     {{ $role := . }}
     {{ $filtered := where $students "role" $role }}
     {{ $filtered = sort $filtered "lastname" }}
+    {{ $filtered = sort $filtered "area" }}
     {{ if $filtered }}
-      <h3>{{ i18n $role }}</h3>
-      <ul>
-        {{ range $filtered }}
-          <li>
-            <a href="{{ .url }}">{{ .firstname }} {{.lastname }}</a>
-	    {{ if .advisor }}<span style="font-size: 75%; opacity: 80%">({{ i18n "supervised_by" }} {{ .advisor }})</span>{{ end }}
-          </li>
-        {{ end }}
-      </ul>
+    <h3>{{ i18n $role }}</h3>
+    <ul>
+      {{ range $filtered }}
+      <li{{ if .area }} class="area-{{ .area }}"{{ end }}>
+        <a href="{{ .url }}">{{ .firstname }} {{.lastname }}</a>
+        {{ if .advisor }}<span style="font-size: 75%; opacity: 80%">({{ i18n "supervised_by" }} {{ .advisor }})</span>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
     {{ end }}
   {{ end }}
 
