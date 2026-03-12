@@ -1,0 +1,19 @@
+main-description: "Le GRIF est le groupe de recherche en informatique fondamentale de l'Université de Sherbrooke, réunissant des membres aux expertises variées: bio-informatique, méthodes formelles, informatique théorique et quantique."
+
+members: "Membres"
+professors: "Professeur·e·s"
+postdoc: "Postdoctorant·e·s"
+phd: "Doctorant·e·s"
+msc: "Étudiant·e·s à la maîtrise"
+bsc: "Étudiant·e·s au baccalauréat"
+supervised_by: "supervision:"
+
+themes: "Thèmes de recherche"
+themes-description: "Les activités de recherche du GRIF touchent à ces domaines:"
+
+courses: "Cours"
+courses-description: "Cours de l'Université de Sherbrooke liés aux domaines du GRIF et enseignés par ses membres:"
+
+talks: "Présentations"
+seminar: "séminaire"
+lunch: "midi-théorie"

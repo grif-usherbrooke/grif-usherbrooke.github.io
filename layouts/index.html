@@ -1,0 +1,86 @@
+{{ define "main" }}
+
+  {{ $lang := .Site.Language.Lang }}
+
+  <div>{{ i18n "main-description" }}</div>
+
+  {{ $profs := index .Site.Data $lang "prof" }}
+  {{ $profs = sort $profs "lastname" }}
+  {{ $students := .Site.Data.students }}
+
+  <h2 id="members">{{ i18n "members" }}</h2>
+  
+  {{ if $profs }}
+    <h3>{{ i18n "professors" }}</h3>
+    <ul>
+      {{ range $profs }}
+        <li><a href="{{ .url }}">{{ .firstname }} {{ .lastname }}</a> — {{ .expertise  | markdownify}}</li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+  {{ range slice "postdoc" "phd" "msc" "bsc" }}
+    {{ $role := . }}
+    {{ $filtered := where $students "role" $role }}
+    {{ $filtered = sort $filtered "lastname" }}
+    {{ if $filtered }}
+      <h3>{{ i18n $role }}</h3>
+      <ul>
+        {{ range $filtered }}
+          <li>
+            <a href="{{ .url }}">{{ .firstname }} {{.lastname }}</a>
+	    {{ if .advisor }}<span style="font-size: 75%; opacity: 80%">({{ i18n "supervised_by" }} {{ .advisor }})</span>{{ end }}
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  {{ end }}
+
+  {{ $themes := index .Site.Data $lang "themes" }}
+
+  {{ if $themes }}
+    <h2 id="themes">{{ i18n "themes" }}</h2>
+
+    <div>{{ i18n "themes-description" }}</div>
+      
+    <ul class="themes-grid">
+      {{ range $themes }}
+        <li>{{ .name | markdownify }}</li>
+      {{ end }}
+    </ul>
+  {{ end }}
+
+  {{ $courses := .Site.Data.courses }}
+  {{ if $courses }}
+    <h2 id="courses">{{ i18n "courses" }}</h2>
+    
+    <div>{{ i18n "courses-description" }}</div>
+    
+    <ul>
+      {{ range $courses }}
+        <li><a href="{{ .url }}">{{ .name }}</a></li>
+      {{ end }}
+    </ul>
+  {{ end }}
+  
+  {{ $talks := .Site.Data.talks }}
+
+  {{ if $talks }}
+    <h2 id="talks">{{ i18n "talks" }}</h2>
+    <ul>
+      {{ range $talks }}
+        <li>
+          {{ .date }}:
+          {{ if .url }}
+            <a href="{{ .url }}">{{ .title }}</a>
+          {{ else }}
+            {{ .title }}
+          {{ end }}
+          — {{ .speaker }}
+          {{ if .type }}<span style="font-size: 75%; opacity: 80%">({{ i18n .type }})</span>{{ end }}
+        </li>
+      {{ end }}
+    </ul>
+    {{ end }}
+
+{{ end }}

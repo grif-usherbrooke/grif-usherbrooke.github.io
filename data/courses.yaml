@@ -1,0 +1,41 @@
+- name: "MAT115 – Logique et mathématiques discrètes"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/MAT115/"
+  
+- name: "IFT313 – Introduction aux langages formels"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT313/"
+
+- name: "IFT339 – Structures de données"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT339/"
+
+- name: "IFT436 – Algorithmes et structures de données"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT436/"
+
+- name: "IFT503/IFT711 – Théorie du calcul"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT503/"
+
+- name: "IGL501/IGL710 – Méthodes formelles en génie logiciel"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IGL710/"
+
+- name: "IGL502/IGL752 – Techniques de vérification et de validation"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IGL752/"
+
+- name: "IFT606 – Sécurité et cryptographie"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT606/"
+
+- name: "BIN702 – Algorithmes pour la bio-informatique"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/BIN702/"
+
+- name: "BIN704 – Sujets choisis en bio-informatique"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/BIN704/"
+
+- name: "BIN710 – Forage de données pour la bio-informatique"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/BIN710/"
+
+- name: "IFT769 – Sujets choisis en informatique théorique"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT769/"
+
+- name: "IFT800 – Algorithmique"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT800/"
+
+- name: "IFT814 – Cryptographie"
+  url: "https://www.usherbrooke.ca/admission/fiches-cours/IFT814/"

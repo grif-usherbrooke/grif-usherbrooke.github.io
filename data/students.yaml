@@ -1,0 +1,39 @@
+- firstname: "Benjamin"
+  lastname: "Courchesne"
+  role: "msc"
+  advisor: "Michael Blondin"
+
+- firstname: "Samy Chady"
+  lastname: "Khoumsi-Kasmi"
+  role: "msc"
+  advisor: "Michael Blondin"
+
+- firstname: "Vanessa"
+  lastname: "Flügel"
+  role: "phd"
+  advisor: "Michael Blondin"
+
+- firstname: "Gurleen"
+  lastname: "Padda"
+  role: "phd"
+  advisor: "Dave Touchette"
+
+- firstname: "Antoine"
+  lastname: "Carrier"
+  role: "phd"
+  advisor: "Dave Touchette"
+
+- firstname: "Simon"
+  lastname: "Ducharme"
+  role: "msc"
+  advisor: "Dave Touchette"
+
+- firstname: "Louis"
+  lastname: "Desruisseaux"
+  role: "msc"
+  advisor: "Dave Touchette"
+
+- firstname: "Elisabeth"
+  lastname: "Maillot"
+  role: "msc"
+  advisor: "Dave Touchette + Cunlu Zhou"

@@ -1,0 +1,72 @@
+baseURL = "https://example.org/"
+theme = "terminal"
+defaultContentLanguageInSubdir = true
+defaultContentLanguage = "en"
+title = "GRIF"
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    title = "Research group on fundamental computer science of the Université de Sherbrooke"
+    weight = 1
+
+    [languages.en.params.logo]
+      logoText = "GRIF"
+      logoHomeLink = "/"
+
+    [[languages.en.menu.main]]
+     name = "Members"
+     url = "#members"
+     weight = 1
+
+    [[languages.en.menu.main]]
+      name = "Research themes"
+      url = "#themes"
+      weight = 2
+
+    [[languages.en.menu.main]]
+      name = "Courses"
+      url = "#courses"
+      weight = 3
+
+    [[languages.en.menu.main]]
+      name = "Talks"
+      url = "#talks"
+      weight = 4
+	
+  [languages.fr]
+    languageName = "Français"
+    languageCode = "fr"
+    title = "GRIF – Groupe de recherche en informatique fondamentale de l'Université de Sherbrooke"
+    weight = 2
+
+    [languages.fr.params.logo]
+	logoText = "GRIF"
+        logoHomeLink = "/"
+
+    [[languages.fr.menu.main]]
+     name = "Membres"
+     url = "#members"
+     weight = 1
+
+    [[languages.fr.menu.main]]
+      name = "Thèmes de recherche"
+      url = "#themes"
+      weight = 2
+
+    [[languages.fr.menu.main]]
+      name = "Cours"
+      url = "#courses"
+      weight = 3
+
+    [[languages.fr.menu.main]]
+      name = "Présentations"
+      url = "#talks"
+      weight = 4
+
+[params]
+  showLanguageSelector = true
+  Toc = true
+  fullWidthTheme = false
+  centerTheme = false

@@ -1,0 +1,19 @@
+main-description: "The GRIF is the fundamental computer science research group at the Université de Sherbrooke, bringing together members with diverse expertise: bioinformatics, formal methods, theoretical and quantum computing."
+
+members: "Members"
+professors: "Professors"
+postdoc: "Postdocs"
+phd: "PhD students"
+msc: "Master's students"
+bsc: "Undergraduate students"
+supervised_by: "advisor:"
+
+themes: "Research themes"
+themes-description: "The research activities of the GRIF cover the following topics:"
+
+courses: "Courses"
+courses-description: "Courses of the Université de Sherbroke related to the fields of the GRIF and taught (in French) by its members:"
+
+talks: "Talks"
+seminar: "seminar"
+lunch: "theory lunch"
