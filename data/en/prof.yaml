@@ -2,7 +2,7 @@
   lastname: "Blondin"
   role: "prof"
   area: "formal"
-  expertise: "algorithmic formal verification, automata theory, logic, computational complexity"
+  expertise: "algorithmic formal verification, automata, logic, computational complexity"
   url: "https://michaelblondin.com/en/"
 
 - firstname: "Marc"

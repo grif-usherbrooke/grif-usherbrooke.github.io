@@ -2,7 +2,7 @@
   lastname: "Blondin"
   role: "prof"
   area: "formal"
-  expertise: "vérification formelle algorithmique, théorie des automates, logique, complexité du calcul"
+  expertise: "vérification formelle algorithmique, automates, logique, complexité du calcul"
   url: "https://michaelblondin.com/fr/"
 
 - firstname: "Marc"
