@@ -26,24 +26,30 @@
     {{ $role := . }}
     {{ $filtered := where $students "role" $role }}
     {{ $filtered = sort $filtered "lastname" }}
-    {{ $filtered = sort $filtered "area" }}
-    {{ if $filtered }}
-    <h3>{{ i18n $role }}</h3>
-    <ul>
-      {{ range $filtered }}
-      <li{{ if .area }} class="area-{{ .area }}"{{ end }}>
-	{{ if .url }}
-	  <a href="{{ .url }}">{{ .firstname }} {{ .lastname }}</a>
-	{{ else }}
-   	  {{ .firstname }} {{ .lastname }}
-	{{ end }}
-        {{ if .advisor }}<span style="font-size: 75%; opacity: 80%">({{ i18n "supervised_by" }} {{ .advisor }})</span>{{ end }}
-      </li>
-      {{ end }}
-    </ul>
+    {{ $withKey := slice }}
+    {{ range $filtered }}
+      {{ $withKey = $withKey | append (dict "member" . "key" (index .area 0)) }}
+    {{ end }}
+    {{ $withKey = sort $withKey "key" }}
+    {{ if $withKey }}
+      <h3>{{ i18n $role }}</h3>
+      <ul class="members-list">
+        {{ range $withKey }}
+          {{ $m := .member }}
+          {{ $style := partial "area-bar.html" $m | safeCSS }}
+          <li style="{{ $style }}">
+            {{ if $m.url }}
+              <a href="{{ $m.url }}">{{ $m.firstname }} {{ $m.lastname }}</a>
+            {{ else }}
+              {{ $m.firstname }} {{ $m.lastname }}
+            {{ end }}
+            {{ if $m.advisor }}<span style="font-size: 75%; opacity: 80%">({{ i18n "supervised_by" }} {{ $m.advisor }})</span>{{ end }}
+          </li>
+        {{ end }}
+      </ul>
     {{ end }}
   {{ end }}
-
+    
   {{ $themes := index .Site.Data $lang "themes" }}
 
   {{ if $themes }}

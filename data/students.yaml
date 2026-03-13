@@ -1,97 +1,97 @@
 - firstname: "Benjamin"
   lastname: "Courchesne"
   role: "msc"
-  area: "formal"
+  area: ["formal"]
   advisor: "Michael Blondin"
   url: "https://github.com/Capucinoxx/"
 
 - firstname: "Samy Chady"
   lastname: "Khoumsi-Kasmi"
   role: "msc"
-  area: "formal"
+  area: ["formal", "quantum"]
   advisor: "Michael Blondin"
 
 - firstname: "Vanessa"
   lastname: "Flügel"
   role: "phd"
-  area: "formal"
+  area: ["formal"]
   advisor: "Michael Blondin + Guillermo A. Pérez @ UAntwerpen"
 
 - firstname: "Gurleen"
   lastname: "Padda"
   role: "phd"
-  area: "quantum"
+  area: ["quantum"]
   advisor: "Dave Touchette"
 
 - firstname: "Antoine"
   lastname: "Carrier"
   role: "phd"
-  area: "quantum"
+  area: ["quantum"]
   advisor: "Dave Touchette"
 
 - firstname: "Simon"
   lastname: "Ducharme"
   role: "msc"
-  area: "quantum"
+  area: ["quantum"]
   advisor: "Dave Touchette"
 
 - firstname: "Louis"
   lastname: "Desruisseaux"
   role: "msc"
-  area: "quantum"
+  area: ["quantum"]
   advisor: "Dave Touchette"
 
 - firstname: "Elisabeth"
   lastname: "Mailhot"
   role: "msc"
-  area: "quantum"
+  area: ["quantum"]
   advisor: "Dave Touchette + Cunlu Zhou"
 
 - firstname: "Ludovic"
   lastname: "Chabot Provencher"
   role: "bsc"
-  area: "quantum"
+  area: ["quantum"]
   advisor: "Dave Touchette + Cunlu Zhou"
 
 - firstname: "Eliott"
   lastname: "Texier"
   role: "bsc"
-  area: "formal"
+  area: ["formal"]
   advisor: "Michael Blondin"
 
 - firstname: "Pierre-Étienne"
   lastname: "Brindle"
   role: "bsc"
-  area: "quantum"
+  area: ["quantum"]
   advisor: "Dave Touchette"
 
 - firstname: "Elham"
   lastname: "Torabian"
   role: "postdoc"
-  area: "quantum"
+  area: ["quantum"]
   advisor: "Dave Touchette + Cunlu Zhou"
 
 - firstname: "Quelen"
   lastname: "Cartellier"
   role: "phd"
-  area: "formal"
+  area: ["formal"]
   advisor: "Marc Frappier + Amel Mammar @ Institut polytechnique de Paris"
 
 - firstname: "Théo"
   lastname: "Lacoste"
   role: "phd"
-  area: "formal"
+  area: ["formal"]
   advisor: "Marc Frappier + Régine Laleau @ U. Paris-Est Créteil"
 
 - firstname: "Ryan"
   lastname: "Godin"
   role: "msc"
-  area: "quantum"
+  area: ["quantum", "bio"]
   advisor: "Nadia Tahiri"
 
 - firstname: "Aleksandr"
   lastname: "Koshkarov"
   role: "phd"
-  area: "formal"
+  area: ["formal", "bio"]
   advisor: "Nadia Tahiri"
   

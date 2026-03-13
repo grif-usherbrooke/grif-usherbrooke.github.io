@@ -1,0 +1,12 @@
+<!-- Unfortunately, these colors are duplicated in static/style.css -->
+{{ $colors := dict "bio" "#2980b9" "formal" "#4a9e6b" "quantum" "#8e44ad" }}
+{{ $areaColors := slice }}
+{{ range .area }}
+  {{ $areaColors = $areaColors | append (index $colors .) }}
+{{ end }}
+
+{{ $c1 := index $areaColors 0 | default "#000000" }}
+{{ $c2 := index $areaColors 1 | default $c1 }}
+
+
+{{ printf "background: repeating-linear-gradient(to bottom, %s, %s 4px, %s 4px, %s 6px) left / 6px 100%% no-repeat;" $c1 $c1 $c2 $c2 }}
