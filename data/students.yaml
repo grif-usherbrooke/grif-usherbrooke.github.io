@@ -83,13 +83,13 @@
   area: "formal"
   advisor: "Marc Frappier + Régine Laleau @ U. Paris-Est Créteil"
 
-  - firstname: "Ryan"
+- firstname: "Ryan"
   lastname: "Godin"
   role: "msc"
   area: "quantum"
   advisor: "Nadia Tahiri"
 
-  - firstname: "Aleksandr"
+- firstname: "Aleksandr"
   lastname: "Koshkarov"
   role: "phd"
   area: "formal"
