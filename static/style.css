@@ -436,9 +436,9 @@ ul {
 }
 
 /* Research areas */
-li.area-bio     { border-left: 4px solid var(--color-bio);}
-li.area-formal  { border-left: 4px solid var(--color-formal);}
-li.area-quantum { border-left: 4px solid var(--color-quantum);}
+li.area-bio     { border-left: 6px solid var(--color-bio);}
+li.area-formal  { border-left: 6px solid var(--color-formal);}
+li.area-quantum { border-left: 6px solid var(--color-quantum);}
 
 .members-list li, li.area-bio, li.area-formal, li.area-quantum {
   padding-left: 12px;
