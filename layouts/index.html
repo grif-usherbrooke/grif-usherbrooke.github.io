@@ -32,7 +32,11 @@
     <ul>
       {{ range $filtered }}
       <li{{ if .area }} class="area-{{ .area }}"{{ end }}>
-        <a href="{{ .url }}">{{ .firstname }} {{.lastname }}</a>
+	{{ if .url }}
+	  <a href="{{ .url }}">{{ .firstname }} {{ .lastname }}</a>
+	{{ else }}
+   	  {{ .firstname }} {{ .lastname }}
+	{{ end }}
         {{ if .advisor }}<span style="font-size: 75%; opacity: 80%">({{ i18n "supervised_by" }} {{ .advisor }})</span>{{ end }}
       </li>
       {{ end }}
