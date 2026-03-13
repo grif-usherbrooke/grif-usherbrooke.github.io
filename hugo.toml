@@ -15,7 +15,7 @@ title = "GRIF"
       dateFormat = "2006-01-02"
   
     [languages.en.params.logo]
-      logoText = "GRIF"
+      logoText = "GRIF @ UdeS"
       logoHomeLink = "/"
 
     [[languages.en.menu.main]]
@@ -48,7 +48,7 @@ title = "GRIF"
       dateFormat = "02/01/2006"
 
     [languages.fr.params.logo]
-      logoText = "GRIF"
+      logoText = "GRIF @ UdeS"
       logoHomeLink = "/"
 
     [[languages.fr.menu.main]]
