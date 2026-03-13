@@ -11,6 +11,9 @@ title = "GRIF"
     title = "Research group on fundamental computer science of the Université de Sherbrooke"
     weight = 1
 
+    [languages.en.params]
+      dateFormat = "2006-01-02"
+  
     [languages.en.params.logo]
       logoText = "GRIF"
       logoHomeLink = "/"
@@ -41,9 +44,12 @@ title = "GRIF"
     title = "GRIF – Groupe de recherche en informatique fondamentale de l'Université de Sherbrooke"
     weight = 2
 
+    [languages.fr.params]
+      dateFormat = "02/01/2006"
+
     [languages.fr.params.logo]
-	logoText = "GRIF"
-        logoHomeLink = "/"
+      logoText = "GRIF"
+      logoHomeLink = "/"
 
     [[languages.fr.menu.main]]
      name = "Membres"

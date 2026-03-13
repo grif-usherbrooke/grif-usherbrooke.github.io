@@ -74,7 +74,7 @@
     <ul>
       {{ range $talks }}
         <li>
-          {{ .date }}:
+	  {{ time.Format $.Site.Language.Params.dateFormat .date }}:
           {{ if .url }}
             <a href="{{ .url }}">{{ .title }}</a>
           {{ else }}
