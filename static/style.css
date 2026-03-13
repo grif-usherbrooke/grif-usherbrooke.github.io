@@ -407,7 +407,8 @@ h2 + h3, h2 + ul, h3 + ul {
 }
 
 ul {
-  margin-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1.75rem;
 }
 
 /* Width tweaks */
