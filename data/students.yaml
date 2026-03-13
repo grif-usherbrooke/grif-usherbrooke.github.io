@@ -86,12 +86,12 @@
   - firstname: "Ryan"
   lastname: "Godin"
   role: "msc"
-  area: "quantum+bioinfo"
+  area: "quantum"
   advisor: "Nadia Tahiri"
 
   - firstname: "Aleksandr"
   lastname: "Koshkarov"
   role: "phd"
-  area: "formal+bioinfo"
+  area: "formal"
   advisor: "Nadia Tahiri"
   
