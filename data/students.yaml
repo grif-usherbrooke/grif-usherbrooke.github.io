@@ -86,12 +86,17 @@
 - firstname: "Ryan"
   lastname: "Godin"
   role: "msc"
-  area: ["quantum", "bio"]
+  area: ["bio", "quantum"]
   advisor: "Nadia Tahiri"
 
 - firstname: "Aleksandr"
   lastname: "Koshkarov"
   role: "phd"
-  area: ["formal", "bio"]
+  area: ["bio", "formal"]
   advisor: "Nadia Tahiri"
-  
+
+- firstname: "Alexandre"
+  lastname: "Leblanc"
+  role: "phd"
+  area: ["quantum"]
+  advisor: "Cunlu Zhou + Stefanos Kourtis @ IQ"
