@@ -94,6 +94,26 @@
   role: "phd"
   area: ["bio", "formal"]
   advisor: "Nadia Tahiri"
+  
+- firstname: "Francis"
+  lastname: "Sarrazin"
+  role: "msc"
+  area: ["bio"]
+  advisor: "Manuel Lafond"
+  
+- firstname: "Lida"
+  lastname: "Hooshyar"
+  role: "phd"
+  area: ["bio"]
+  advisor: "Nadia Tahiri + Manuel Lafond"
+  
+
+- firstname: "Érika"
+  lastname: "Robidas"
+  role: "bsc"
+  area: ["bio"]
+  advisor: "Manuel Lafond"
+  
 
 - firstname: "Alexandre"
   lastname: "Leblanc"
