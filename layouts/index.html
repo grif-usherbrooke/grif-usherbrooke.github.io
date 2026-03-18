@@ -90,7 +90,7 @@
       <details>
         <summary style="margin-left: 1rem; cursor: pointer;">{{ i18n "show_more" }}</summary>
         <ul style="margin-top: 0.5rem;">
-          {{ range after 5 $talks }}
+          {{ range after 6 $talks }}
             {{ partial "talk.html" (dict "talk" . "site" $.Site) }}
           {{ end }}
         </ul>
