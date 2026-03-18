@@ -88,7 +88,7 @@
     </ul>
     {{ if gt (len $talks) 6 }}
       <details>
-        <summary style="margin-left: 1rem; cursor: pointer;">{{ i18n "show_more" }}</summary>
+        <summary style="margin-left: 1rem; cursor: pointer;"><em>{{ i18n "show_more" }}</em></summary>
         <ul style="margin-top: 0.5rem;">
           {{ range after 6 $talks }}
             {{ partial "talk.html" (dict "talk" . "site" $.Site) }}
