@@ -1,6 +1,6 @@
 <li>
-  {{ time.Format .site.Language.Params.dateFormat .talk.date }}:
-  {{ .talk.speaker }} — 
+  <span style="font-size: 90%; opacity: 80%">{{ time.Format .site.Language.Params.dateFormat .talk.date }}.</span>
+  {{ .talk.speaker }}:
   {{ if .talk.url }}
     <a href="{{ .talk.url }}"><em>{{ .talk.title }}</em></a>
   {{ else }}

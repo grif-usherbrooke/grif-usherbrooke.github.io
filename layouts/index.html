@@ -4,10 +4,10 @@
 
   <div>{{ i18n "main-description" | safeHTML }}</div>
 
-  {{ $profs := index .Site.Data $lang "prof" }}
+  {{ $profs := index hugo.Data $lang "prof" }}
   {{ $profs = sort $profs "lastname" }}
   {{ $profs = sort $profs "area" }}
-  {{ $students := .Site.Data.students }}
+  {{ $students := hugo.Data.students }}
 
   <h2 id="members">{{ i18n "members" }}</h2>
 
@@ -50,7 +50,7 @@
     {{ end }}
   {{ end }}
     
-  {{ $themes := index .Site.Data $lang "themes" }}
+  {{ $themes := index hugo.Data $lang "themes" }}
 
   {{ if $themes }}
     <h2 id="themes">{{ i18n "themes" }}</h2>
@@ -64,7 +64,7 @@
     </ul>
   {{ end }}
 
-  {{ $courses := .Site.Data.courses }}
+  {{ $courses := hugo.Data.courses }}
   {{ if $courses }}
     <h2 id="courses">{{ i18n "courses" }}</h2>
     
@@ -77,7 +77,7 @@
     </ul>
   {{ end }}
   
-  {{ $talks := .Site.Data.talks }}
+  {{ $talks := hugo.Data.talks }}
 
   {{ if $talks }}
     <h2 id="talks">{{ i18n "talks" }}</h2>
