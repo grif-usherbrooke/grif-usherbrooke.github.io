@@ -132,6 +132,12 @@
   area: ["formal"]
   advisor: "Marc Frappier"
 
+- firstname: "Caroline"
+  lastname: "Fortier"
+  role: "msc"
+  area: ["bio"]
+  advisor: "Nadia Tahiri"
+
 - firstname: "Hugo"
   lastname: "Lamoureux"
   role: "msc"
