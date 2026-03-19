@@ -70,7 +70,7 @@
   role: "postdoc"
   area: ["quantum"]
   advisor: "Dave Touchette + Cunlu Zhou"
-
+ 
 - firstname: "Quelen"
   lastname: "Cartellier"
   role: "phd"
@@ -113,10 +113,27 @@
   role: "bsc"
   area: ["bio"]
   advisor: "Manuel Lafond"
-  
 
 - firstname: "Alexandre"
   lastname: "Leblanc"
   role: "phd"
   area: ["quantum"]
   advisor: "Cunlu Zhou + Stefanos Kourtis @ IQ"
+ 
+- firstname: "Cabrel"
+  lastname: "Feukeng Momo"
+  role: "phd"
+  area: ["formal"]
+  advisor: "Marc Frappier + Amel Mammar @ Institut polytechnique de Paris"
+
+- firstname: "Lucas"
+  lastname: "Villaume"
+  role: "phd"
+  area: ["formal"]
+  advisor: "Marc Frappier"
+
+- firstname: "Hugo"
+  lastname: "Lamoureux"
+  role: "msc"
+  area: ["formal"]
+  advisor: "Marc Frappier"
