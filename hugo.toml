@@ -13,6 +13,8 @@ title = "GRIF"
 
     [languages.en.params]
       dateFormat = "2006-01-02"
+      subtitle = "The GRIF is the fundamental computer science research group at the Université de Sherbrooke."
+      keywords = "theoretical computer science, algorithms, bioinformatics, formal methods, cybersecurity, automata theory, quantum computing, Université de Sherbrooke, Quebec, Canada, GRIF"
   
     [languages.en.params.logo]
       logoText = "GRIF @ UdeS"
@@ -46,6 +48,8 @@ title = "GRIF"
 
     [languages.fr.params]
       dateFormat = "02/01/2006"
+      subtitle = "Le GRIF est le groupe de recherche en informatique fondamentale de l'Université de Sherbrooke."
+      keywords = "informatique théorique, informatique fondamentale, algorithmique, bio-informatique, méthodes formelles, cybersécurité, automates, informatique quantique, Université de Sherbrooke, Québec, Canada, GRIF"
 
     [languages.fr.params.logo]
       logoText = "GRIF @ UdeS"
