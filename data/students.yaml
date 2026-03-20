@@ -130,7 +130,7 @@
   lastname: "Villaume"
   role: "phd"
   area: ["formal"]
-  advisor: "Marc Frappier"
+  advisor: "Marc Frappier + Guillaume Bonfante @ Université de Lorraine/INRIA"
 
 - firstname: "Caroline"
   lastname: "Fortier"
@@ -141,5 +141,17 @@
 - firstname: "Hugo"
   lastname: "Lamoureux"
   role: "msc"
+  area: ["formal"]
+  advisor: "Marc Frappier"
+
+- firstname: "Laérian"
+  lastname: "Bontick"
+  role: "bsc"
+  area: ["formal"]
+  advisor: "Marc Frappier"
+
+- firstname: "Yassine"
+  lastname: "Daanoun"
+  role: "bsc"
   area: ["formal"]
   advisor: "Marc Frappier"
