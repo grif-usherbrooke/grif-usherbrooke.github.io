@@ -6,7 +6,6 @@
 
   {{ $profs := index hugo.Data $lang "prof" }}
   {{ $profs = sort $profs "lastname" }}
-  {{ $profs = sort $profs "area" }}
   {{ $students := hugo.Data.students }}
 
   <h2 id="members">{{ i18n "members" }}</h2>
