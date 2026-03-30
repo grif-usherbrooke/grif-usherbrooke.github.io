@@ -8,7 +8,7 @@
 - firstname: "Samy Chady"
   lastname: "Khoumsi-Kasmi"
   role: "msc"
-  area: ["formal", "quantum"]
+  area: ["formal"]
   advisor: "Michael Blondin"
 
 - firstname: "Vanessa"
@@ -21,7 +21,7 @@
   lastname: "Padda"
   role: "phd"
   area: ["quantum"]
-  advisor: "Dave Touchette"
+  advisor: "Dave Touchette + Claude Crépeau @ McGill"
 
 - firstname: "Antoine"
   lastname: "Carrier"
@@ -70,7 +70,7 @@
   role: "postdoc"
   area: ["quantum"]
   advisor: "Dave Touchette + Cunlu Zhou"
-
+ 
 - firstname: "Quelen"
   lastname: "Cartellier"
   role: "phd"
@@ -113,10 +113,45 @@
   role: "bsc"
   area: ["bio"]
   advisor: "Manuel Lafond"
-  
 
 - firstname: "Alexandre"
   lastname: "Leblanc"
   role: "phd"
   area: ["quantum"]
   advisor: "Cunlu Zhou + Stefanos Kourtis @ IQ"
+ 
+- firstname: "Cabrel"
+  lastname: "Feukeng Momo"
+  role: "phd"
+  area: ["formal"]
+  advisor: "Marc Frappier + Amel Mammar @ Institut polytechnique de Paris"
+
+- firstname: "Lucas"
+  lastname: "Villaume"
+  role: "phd"
+  area: ["formal"]
+  advisor: "Marc Frappier + Guillaume Bonfante @ Université de Lorraine/INRIA"
+
+- firstname: "Caroline"
+  lastname: "Fortier"
+  role: "msc"
+  area: ["bio"]
+  advisor: "Nadia Tahiri"
+
+- firstname: "Hugo"
+  lastname: "Lamoureux"
+  role: "msc"
+  area: ["formal"]
+  advisor: "Marc Frappier"
+
+- firstname: "Laérian"
+  lastname: "Bontick"
+  role: "bsc"
+  area: ["formal"]
+  advisor: "Marc Frappier"
+
+- firstname: "Yassine"
+  lastname: "Daanoun"
+  role: "bsc"
+  area: ["formal"]
+  advisor: "Marc Frappier"

@@ -3,3 +3,79 @@
   date: "2026-03-23"
   type: "lunch"
   url: "https://blog.michaelblondin.com/posts/word-equations/"
+
+- title: "Protocoles de population: robustesse et composabilité"
+  speaker: "Benjamin Courchesne"
+  date: "2025-03-26"
+  type: "club-info"
+
+- title: "Résolubilité de réparation minimale de cographe par suppressions d'arêtes"
+  speaker: "Francis Sarrazin"
+  date: "2024-12-04"
+  type: "seminar"
+
+- title: "Safety analysis of parameterised networks with non-blocking rendez-vous and broadcasts"
+  speaker: "Lucie Guillou"
+  date: "2024-09-16"
+  type: "seminar"
+
+
+- title: "Protocoles de population avec couleurs"
+  speaker: "François Ladouceur"
+  date: "2023-11-29"
+  type: "club-info"
+
+- title: "Graph widths for exact algorithms in structural RNA bioinformatics"
+  speaker: "Bertrand Marchand"
+  date: "2023-06-22"
+  type: "seminar"
+
+- title: "Directed reachability for infinite-state systems"
+  speaker: "Philip Offtermatt"
+  date: "2021-03-19"
+  type: "club-info"
+
+- title: "Massive parallelization of branching algorithms"
+  speaker: "Andres Pastrana"
+  date: "2021-01-19"
+  type: "club-info"
+
+- title: "Approaching safety for parameterized systems using view abstraction"
+  speaker: "Philip Offtermatt"
+  date: "2020-03-11"
+  type: "seminar"
+
+- title: "Calcul sûr biparti à l'ère de l'information quantique"
+  speaker: "Philippe Lamontagne"
+  date: "2019-12-05"
+  type: "seminar"
+
+- title: "Forage de modèles de processus: amélioration du prétraitement et intégration de buts"
+  speaker: "Daniel Amyot"
+  date: "2019-11-15"
+  type: "seminar"
+
+- title: "Verification of flat FIFO systems"
+  speaker: "Alain Finkel"
+  date: "2019-10-03"
+  type: "seminar"
+
+- title: "The reachability problem for Petri nets is not elementary"
+  speaker: "Filip Mazowiecki"
+  date: "2019-05-02"
+  type: "seminar"
+
+- title: "Parameterized verification of population protocols"
+  speaker: "Stefan Jaax"
+  date: "2018-11-24"
+  type: "seminar"
+
+- title: "Un autre exemple d'ingénierie mathématique: Le théorème de Goodstein"
+  speaker: "Jean-Raymond Abrial"
+  date: "2018-10-03"
+  type: "seminar"
+
+- title: "Ingénierie mathématique: définition et exemple"
+  speaker: "Jean-Raymond Abrial"
+  date: "2018-09-19"
+  type: "seminar"

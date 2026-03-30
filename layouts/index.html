@@ -4,10 +4,9 @@
 
   <div>{{ i18n "main-description" | safeHTML }}</div>
 
-  {{ $profs := index .Site.Data $lang "prof" }}
+  {{ $profs := index hugo.Data $lang "prof" }}
   {{ $profs = sort $profs "lastname" }}
-  {{ $profs = sort $profs "area" }}
-  {{ $students := .Site.Data.students }}
+  {{ $students := hugo.Data.students }}
 
   <h2 id="members">{{ i18n "members" }}</h2>
 
@@ -50,7 +49,7 @@
     {{ end }}
   {{ end }}
     
-  {{ $themes := index .Site.Data $lang "themes" }}
+  {{ $themes := index hugo.Data $lang "themes" }}
 
   {{ if $themes }}
     <h2 id="themes">{{ i18n "themes" }}</h2>
@@ -64,7 +63,7 @@
     </ul>
   {{ end }}
 
-  {{ $courses := .Site.Data.courses }}
+  {{ $courses := hugo.Data.courses }}
   {{ if $courses }}
     <h2 id="courses">{{ i18n "courses" }}</h2>
     
@@ -77,24 +76,25 @@
     </ul>
   {{ end }}
   
-  {{ $talks := .Site.Data.talks }}
+  {{ $talks := hugo.Data.talks }}
 
   {{ if $talks }}
     <h2 id="talks">{{ i18n "talks" }}</h2>
     <ul>
-      {{ range $talks }}
-        <li>
-	  {{ time.Format $.Site.Language.Params.dateFormat .date }}:
-          {{ if .url }}
-            <a href="{{ .url }}">{{ .title }}</a>
-          {{ else }}
-            {{ .title }}
-          {{ end }}
-          — {{ .speaker }}
-          {{ if .type }}<span style="font-size: 75%; opacity: 80%">({{ i18n .type }})</span>{{ end }}
-        </li>
+      {{ range first 6 $talks }}
+        {{ partial "talk.html" (dict "talk" . "site" $.Site) }}
       {{ end }}
     </ul>
+    {{ if gt (len $talks) 6 }}
+      <details>
+        <summary style="margin-left: 1rem; cursor: pointer;"><em>{{ i18n "show_more" }}</em></summary>
+        <ul style="margin-top: 0.5rem;">
+          {{ range after 6 $talks }}
+            {{ partial "talk.html" (dict "talk" . "site" $.Site) }}
+          {{ end }}
+        </ul>
+      </details>
     {{ end }}
+  {{ end }}
 
 {{ end }}
