@@ -81,15 +81,15 @@
   {{ if $talks }}
     <h2 id="talks">{{ i18n "talks" }}</h2>
     <ul>
-      {{ range first 6 $talks }}
+      {{ range first 8 $talks }}
         {{ partial "talk.html" (dict "talk" . "site" $.Site) }}
       {{ end }}
     </ul>
-    {{ if gt (len $talks) 6 }}
+    {{ if gt (len $talks) 8 }}
       <details>
         <summary style="margin-left: 1rem; cursor: pointer;"><em>{{ i18n "show_more" }}</em></summary>
         <ul style="margin-top: 0.5rem;">
-          {{ range after 6 $talks }}
+          {{ range after 8 $talks }}
             {{ partial "talk.html" (dict "talk" . "site" $.Site) }}
           {{ end }}
         </ul>

@@ -46,6 +46,27 @@
     Cluster reduction is a technique that can be used to speed up the construction of phylogenetic networks from sets of trees, or so we thought.  Baroni, Semple, and Steel proved that cluster reduction is safe for 2 trees, that is, it preserves the optimality of the constructed network when the input consists of 2 trees.  While there are inputs where cluster reduction isn’t applicable, Li and Zeh verified experimentally that on 2-tree inputs, it is the single most important technique for constructing optimal networks efficiently in practice, that not using cluster reduction would be folly.  This talk shows that cluster reduction is safe for 3 trees, and briefly mentions how to prove that it is safe also for an arbitrary number of trees if the goal is to compute an optimal tree-child network.  I will also discuss how to prove that without restrictions on the network, cluster reduction is not safe for 10 or more trees.  With a little extra care, the proof also shows that cluster reduction isn’t safe for 10 or more trees when the goal is to find an optimal orchard.  What happens with 4-9 trees is an open problem, but our intuition is that cluster reduction stops being safe already for 4 trees.
 
     To prove the negative result for 10 trees, we need a set of 5 trees that cannot be displayed by a network with 2n or fewer reticulations, where n is the number of leaves of the input trees.  I will discuss how to show that there exists a set of n^eps trees that cannot be displayed by a network with o(n lg n) reticulations.  This is interesting because Bordewich and Semple showed that there exists even a tree-based network with O(n lg n) reticulations that displays all trees on n leaves. Our result shows that the number of reticulations increases by only a constant factor when going from n^eps trees to all trees.  An extension of this technique that is less fun to discuss in a talk but is based on the same idea proves the result that there exists a set of 5 trees that cannot be displayed by a network with 2n or fewer reticulations.
+- title: "Protocoles de population: robustesse et composabilité"
+  speaker: "Benjamin Courchesne"
+  date: "2025-03-26"
+  type: "club-info"
+
+- title: "Quantum methods for searching, counting, learning, and simulating physics"
+  speaker: "Stefanos Kourtis"
+  date: "2025-04-02"
+  type: "seminar"
+  abstract: |
+    I will present our recent progress in designing quantum methods for the solution of a variety of computational problems spanning combinatorial optimization, model counting, machine learning, and the simulation of quantum many-body phenomena. I will focus on a subset of the following topics, depending on time and interest. I will discuss the quantum alternating operator ansatz (QAOA) and its adaptive variant as a framework for combinatorial optimization. I will introduce an adaptive QAOA algorithm based on Clifford circuits, dubbed ADAPT-Clifford, and show benchmarks on synthetic instances of NP-hard problems, demonstrating performance competitive with an established classical algorithm [1]. I will then discuss QAOA in the context of model counting, a class of problems that underlie probabilistic reasoning. I will introduce VQCount, a sampling-based quantum algorithm for approximate counting, and discuss its expected performance on #P-hard counting problems [2]. Next, I will present a quantum machine learning (QML) framework based on fermionic quantum circuits, which we call FermiML. We apply FermiML to some commonly studied datasets and obtain better classification accuracy than corresponding unrestricted QML models [3]. Finally, I will outline our experimental work on simulating quantum many-body phenomena, specifically measurement-induced entanglement phase transitions, on quantum processors [4,5].
+
+     [1] M. H. Muñoz-Arias, S. Kourtis, A. Blais, Phys. Rev. Research 6, 023294 (2024).
+
+     [2] J. Drapeau, S. Banerjee, S. Kourtis, arXiv:2503.07720 (2025).
+
+     [3] J. Gince, J.-M. Pagé, M. Armenta, A. Sarkar and S. Kourtis, 2024 IEEE International Conference on Quantum Computing and Engineering (QCE), Montreal, QC, Canada, 2024, pp. 1672-1678 (2024).
+
+    [4] J. Côté, S. Kourtis, Nat. Commun. 13, 7395 (2022).
+
+    [5] X. Feng, J. Côté, S. Kourtis, B. Skinner, arXiv:2502.01735 (2025).
 
 - title: "Protocoles de population: robustesse et composabilité"
   speaker: "Benjamin Courchesne"
@@ -108,6 +129,8 @@
   date: "2021-01-19"
   type: "club-info"
   video: "https://www.youtube.com/watch?v=j_UAfQ1Q84I"
+  abstract: |
+    Optimization and search problems are often NP-complete, and brute-force techniques must typically be implemented to find exact solutions. Problems such as clustering genes in bioinformatics or finding optimal routes in delivery networks can be solved in exponential-time using recursive branching strategies.  Nevertheless, these algorithms become impractical to solve above certain instance sizes due to the large number of scenarios that need to be explored. Thus, our challenge is to build a fully generic library in C++ to speed up recursive search algorithms with parallelism, which is a non-trivial task. In order to improve previous attempts to parallelize such branching algorithms, we developed a novel load balancing strategy that will guarantee to maintain the nearest to 100% utilization of all computer processors whether a single machine is used or a supercomputer regardless of the cluster’s topology.  
 
 - title: "Approaching safety for parameterized systems using view abstraction"
   speaker: "Philip Offtermatt"
@@ -158,6 +181,8 @@
   speaker: "Stefan Jaax"
   date: "2018-11-24"
   type: "seminar"
+  abstract: |
+    Population protocols (Angluin et al., 2004) are a parameterized model of distributed computation by populations of anonymous, identical, and mobile finite-state agents. Initially introduced to model networks of passively mobile sensors, they also capture the essence of distributed computation in trust propagation or chemical reactions. The talk provides a gentle introduction to population protocols, followed by a demonstration of Peregrine - a parametric verification tool for population protocols developed by the chair for Foundations of Software Reliability and Theoretical Computer Science at Technical University of Munich. Peregrine can automatically verify a large subclass of population protocols, independent of population size. Peregrine also comes with simulation capabilities and support for error diagnostics. The talk will shine light on the mathematical foundations of Peregrine's verification capabilities and provides an outlook on potential future extensions.
 
 - title: "Un autre exemple d'ingénierie mathématique: Le théorème de Goodstein"
   speaker: "Jean-Raymond Abrial"
