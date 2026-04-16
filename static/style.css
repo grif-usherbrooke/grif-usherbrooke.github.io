@@ -460,3 +460,19 @@ li.area-quantum { border-left: 6px solid var(--color-quantum);}
 .dot-bio     { background: var(--color-bio);     }
 .dot-formal  { background: var(--color-formal);  }
 .dot-quantum { background: var(--color-quantum); }
+
+/* Custom style for talk abstracts */
+.talk-abstract {
+    padding: 0.25rem;
+    font-size: 90%;
+    opacity: 90%;
+    background-color: color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.talk-abstract p {
+  margin: 0;
+}
+
+.talk-abstract p + p {
+  text-indent: 1.25rem;
+}

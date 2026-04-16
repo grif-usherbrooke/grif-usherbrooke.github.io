@@ -2,17 +2,50 @@
   speaker: "Jannick Schestag"
   date: "2026-04-20"
   type: "lunch"
+  abstract: |
+    Phylogenetic diversity (PD) is a well-established measure for quantifying the evolutionary diversity of a set of species. It plays a central role in conservation planning and underlies initiatives such as the EDGE of Existence program of the Zoological Society of London and the phylogenetic diversity task force of the IUCN.
 
+    Traditionally, PD is defined on phylogenetic trees: given a set of species A, its PD score is the total weight of all edges on the minimal subtree connecting the root with the leaves in A. However, maximizing phylogenetic diversity on trees alone is biologically not desirable. Thus, we have to find a good trade-off between biological correctness and computational possibility.
+
+    In this talk, we explore two directions of making the model more biologically sound and how it effects computability.
+
+    The first direction we consider is generalizing phylogenetic trees. Modern phylogenetic analyses increasingly rely on phylogenetic networks to model reticulate evolutionary events such as hybridization and horizontal gene transfer. This raises the fundamental question of how PD should be defined in the presence of multiple evolutionary paths.
+
+    Secondly, we survey connecting phylogenetic diversity with considering biological dependencies., that is assuring that protected species may still find prey.
+
+    We discuss the underlying modeling assumptions, how well they capture biological intuition, and the algorithmic challenges they pose. In particular, we compare these notions with respect to their computational tractability and practical applicability, highlighting trade-offs between biological expressiveness and efficient computation.
+     
 - title: "Computability and Transformers: A Circuit Complexity Revival?"
   speaker: "Michaël Cadilhac"
   date: "2026-04-14"
   type: "lunch"
+  slides: "../slides/cadilhac_14-04-26.pdf"
+  video: "https://www.youtube.com/watch?v=TwNztpqSnE8"
+  abstract: |
+    Transformer is a neural network architecture that has been central to the recent boom in AI. Starting with its first definition, proposed in 2017 by Vaswani et al., researchers in formal language theory and machine learning have been refining, formalizing, and extending the model into a diverse playground of computational models. Two intertwined questions naturally arise: What are the problems that are computable by these models, and what are the problems they can learn? While the latter question has only seen little formal progress, the former, more amenable question has been the subject of an intense stream of research.
+    
+    Core to a lot of results on expressiveness for transformers is a sturdy connection to classical results in Boolean circuit complexity. In this talk, I will present the fundamental definitions of the transformer architecture, and review the expressiveness results in relation to Boolean circuits, first order logic, and temporal logic.
 
 - title: "Exploring word equations"
   speaker: "Michael Blondin"
   date: "2026-03-23"
   type: "lunch"
-  url: "https://blog.michaelblondin.com/posts/word-equations/"
+  slides: "https://blog.michaelblondin.com/posts/word-equations/"
+  abstract: |
+    Word equations play a key role in combinatorics on words similar to that of Diophantine equations in number theory. For example, the equation xyyz = AACGCGT has several solutions, e.g. [x ↦ AA, y ↦ CG, z ↦ T].
+
+    Determining whether a given word equation has a solution is a classical decision problem of theoretical computer science. Word equations have been studied since 1946 and their exact computational complexity remains unknown to this day. Furthermore, the decidability of word equations extended with length constraints, a problem of great interest to the formal verification community, has been open for nearly 60 years.
+
+    In this talk, I will introduce word equations, explain their connection to Hilbert's tenth problem, and provide insights into techniques for solving (quadratic) word equations. 
+
+- title: "Sometimes only fools get it right: When cluster reduction isn't safe"
+  speaker: "Norbert Zeh"
+  date: "2025-05-08"
+  type: "seminar"
+  abstract: |
+    Cluster reduction is a technique that can be used to speed up the construction of phylogenetic networks from sets of trees, or so we thought.  Baroni, Semple, and Steel proved that cluster reduction is safe for 2 trees, that is, it preserves the optimality of the constructed network when the input consists of 2 trees.  While there are inputs where cluster reduction isn’t applicable, Li and Zeh verified experimentally that on 2-tree inputs, it is the single most important technique for constructing optimal networks efficiently in practice, that not using cluster reduction would be folly.  This talk shows that cluster reduction is safe for 3 trees, and briefly mentions how to prove that it is safe also for an arbitrary number of trees if the goal is to compute an optimal tree-child network.  I will also discuss how to prove that without restrictions on the network, cluster reduction is not safe for 10 or more trees.  With a little extra care, the proof also shows that cluster reduction isn’t safe for 10 or more trees when the goal is to find an optimal orchard.  What happens with 4-9 trees is an open problem, but our intuition is that cluster reduction stops being safe already for 4 trees.
+
+    To prove the negative result for 10 trees, we need a set of 5 trees that cannot be displayed by a network with 2n or fewer reticulations, where n is the number of leaves of the input trees.  I will discuss how to show that there exists a set of n^eps trees that cannot be displayed by a network with o(n lg n) reticulations.  This is interesting because Bordewich and Semple showed that there exists even a tree-based network with O(n lg n) reticulations that displays all trees on n leaves. Our result shows that the number of reticulations increases by only a constant factor when going from n^eps trees to all trees.  An extension of this technique that is less fun to discuss in a talk but is based on the same idea proves the result that there exists a set of 5 trees that cannot be displayed by a network with 2n or fewer reticulations.
 
 - title: "Protocoles de population: robustesse et composabilité"
   speaker: "Benjamin Courchesne"
@@ -23,22 +56,47 @@
   speaker: "Francis Sarrazin"
   date: "2024-12-04"
   type: "seminar"
+  abstract: |
+    Un langage, ou problème, décrit une famille d’éléments partageant une série de caractéristiques déterminées. Il définit par le même fait l’appartenance ou non d'un élément à cette famille sans ambiguïté possible. Plusieurs problèmes s’appliquent aux graphes, des structures de données visuellement représentées par des nuages de points, appelés nœuds, et des lignes qui les relient, les arêtes. L’attention qui leur est portée n’a rien d’étonnante; les graphes servent à représenter nombre de relations dans divers contextes importants tel le transport, les télécommunications, la biologie et l’intelligence artificielle.
+
+    Pour tout graphe n’appartenant pas à une certaine famille, sa réparation consiste en le retrait de toutes ses erreurs définies par le problème, ou structures interdites, dans l’objectif que le graphe résultant soit membre de ladite famille. Par exemple, un graphe est de la famille des cographes, également appelée P4-Free, s’il ne possède aucun P4 induit. En d’autres mots, un cographe ne doit contenir aucun sous-graphe formé de quatre nœuds et de toutes les arêtes qui les relient, lequel consisterait en un chemin de trois arêtes sans cycle, soit un P4, la structure interdite pour ce cas.
+
+    Une réparation est minimale lorsque réalisée en le moins de modification possible. Les modifications peuvent également être limités à certaines opérations tel que la suppression d’arêtes, et les complexités varient hautement entre chaque interprétation. Même sous ses restrictions, le problème de la résolubilité de réparation minimale de cographe par suppressions d’arêtes est dit NP-Complet. Il a été démontré qu’aucune approche classique permet de le résoudre en temps sous-exponentiel, ce qui introduit l’usage de l’algorithmie à complexité paramétrée tel qu’il sera discuté dans la présentation.
+
+    Définissons H-Free comme l’ensemble des problèmes de réparation minimale par édition menant à l’absence de sous-graphe induits H. Nous présentons un nouvel algorithme récursif compatible sous certaines conditions à la réparation de graphe H-Free. Cet algorithme utilise une sous-fonction modulable adaptée à chaque problème individuel, laquelle reçoit un sous-graphe prime et peut bénéficier des propriétés associées pour retourner un ensemble de solutions partielles dont l’une est garantie optimale. En adaptant cette sous-fonction à la réparation minimale de cographe par suppression d’arêtes, nous renforçons les résultats actuels en termes de complexité paramétrée alors que les limitations, précédemment impossibles à observer, sont maintenant clarifiées. Il est souhaité que ces connaissances nous permettent d’améliorer ces résultats, et de créer de nouvelles ous-fonctions pour d’autres réparations de graphe H-Free.
 
 - title: "Safety analysis of parameterised networks with non-blocking rendez-vous and broadcasts"
   speaker: "Lucie Guillou"
   date: "2024-09-16"
   type: "seminar"
-
+  abstract: |
+    I will present two recent joint works done with Arnaud Sangnier and Nathalie Sznajder. We study networks of processes that all execute the same finite protocol and communicate synchronously in two different ways: a process can broadcast one message to all other processes or send it to at most one other process. We study two coverability problems with a parameterised number of processes (state coverability and configuration coverability). It is already known that these problem are Ackermann-hard (and decidable) in the general case. This already holds when the processes communicate only by broadcasts. We show that when forbidding broadcasts, the two problems are EXPSPACE-complete. We also study a restriction on the protocol: a Wait-Only protocol has no state from which a process can send and receive messages. We show that without broadcasts, both problems are Ptime-complete in this restriction, and with broadcasts, state coverability is Ptime-complete and configuration coverability PSPACE-complete.
 
 - title: "Protocoles de population avec couleurs"
   speaker: "François Ladouceur"
   date: "2023-11-29"
   type: "club-info"
+  abstract: |
+    Le modèle des protocoles de population est bien établi dans le monde du calcul distribué. Il permet à des agents mobiles anonymes, comme les éléments d'un réseau chimique, de calculer des prédicats relatifs à leur configuration initiale. En particulier, le modèle, tel qu'il a été introduit en 2004 par Angluin et al., a été directement lié à l'arithmétique de Presburger. Il a ensuite été largement étudié et de nombreuses variantes ont été définies.
+
+    Dans cet exposé, on introduira les notions de base des protocoles et on décrira une nouvelle variante munie d'un domaine infini de données pour ses agents. On y présentera des exemples de protocoles ainsi que quelques grandes questions liées au modèle.
 
 - title: "Graph widths for exact algorithms in structural RNA bioinformatics"
   speaker: "Bertrand Marchand"
   date: "2023-06-22"
   type: "seminar"
+  abstract: |
+    RNA molecules consist of chains of individual blocks called nucleotides (A, U, G, C), mostly famous for being intermediate information carriers in protein synthesis (messenger RNA). Yet, they also perform a wide variety of other functions in biological systems, from aspects of protein synthesis to gene regulation and chemical reaction catalysis. These functions critically depend on the 3D structures adopted by these molecules, i.e., the way nucleotides pair up in complex folding conformations. Unsurprisingly, several natural computational problems involving this structure therefore need to be solved on a daily basis by bioinformaticians. Examples include folding (what is the preferred structure of an RNA sequence?), structure reconfiguration (is there a feasible reconfiguration path between two structures?) or structure-sequence alignment (are a given structure and sequence a good match ?). These problems are typically computationally hard, especially when going towards realistic biological models.
+
+    This talk will focus on selected instances of such landmark problems, and on current attempts to tackle them with exact parameterized algorithmics. A particular focus will be given to graph algorithms, and graph width parameters. Examples of graph problems emerging from this angle include minimum edge deletion towards a target treewidth value [1], or the computation of directed pathwidth for a particular geometric subset of directed graphs [2].
+
+    References:
+
+    [1] B. Marchand, Y. Ponty, L. Bulteau. Tree Diet: Reducing the Treewidth to Unlock FPT Algorithms in RNA Bioinformatics. Algorithms for Molecular Biology 2022.
+
+    [2] L. Bulteau, B. Marchand, Y. Ponty. A new parameterization for independent set reconfiguration and applications to RNA kinetics. IPEC 2021.
+
+    [3] B. Marchand, S. Will, S. Berkemer, L.Bulteau, Y.Ponty. Automated design of dynamic programming schemes for RNA folding with pseudoknots. WABI 2022  
 
 - title: "Directed reachability for infinite-state systems"
   speaker: "Philip Offtermatt"
@@ -49,31 +107,52 @@
   speaker: "Andres Pastrana"
   date: "2021-01-19"
   type: "club-info"
+  video: "https://www.youtube.com/watch?v=j_UAfQ1Q84I"
 
 - title: "Approaching safety for parameterized systems using view abstraction"
   speaker: "Philip Offtermatt"
   date: "2020-03-11"
   type: "seminar"
+  abstract: |
+    Parameterized systems are models for interactions between an arbitrary number of interaction partners. While for each fixed number of participants, the corresponding instance of the system is finite-state, there are infinitely many instances. I will present a method that is capable of proving correctness for all instances of such a system. This method is called view abstraction, and it relies on an abstraction function which extracts patterns, called views, from the states of the system. These patterns are used to compute an overapproximation of the reachable states of the system. The accuracy of the overapproximation is governed by a parameter, and when it becomes accurate enough, the system can be proven safe without examining the whole state space. I will present my implementation of this method, and as a case-study present a prototype implementation of manual tool-assisted generation of population protocols that makes use of this method to give feedback to the user.
 
 - title: "Calcul sûr biparti à l'ère de l'information quantique"
   speaker: "Philippe Lamontagne"
   date: "2019-12-05"
   type: "seminar"
+  abstract: |
+    La mécanique quantique bouleverse le domaine de la cryptographie. D'un côté, l'algorithme de Shor menace l'infrastructure cryptographique à clé publique en place depuis des décennies. De l'autre, elle permet aussi l'établissement d'une clé secrète dont la sécurité ne repose sur aucune hypothèse, excepté les lois de la physique quantique.
+
+    Dans cette présentation, nous explorerons les possibilités plus méconnues de la cryptographie quantique: celles qui s'appliquent au calcul sûr biparti. Dans ce contexte, deux protagonistes veulent calculer une fonction commune de leurs données privées sans dévoiler celles-ci. Nous verrons dans cette présentation que la mécanique quantique permet ici aussi des tâches impossibles classiquement.
 
 - title: "Forage de modèles de processus: amélioration du prétraitement et intégration de buts"
   speaker: "Daniel Amyot"
   date: "2019-11-15"
   type: "seminar"
-
+  abstract: |
+    Le forage de modèles de processus (process mining) permet de générer automatiquement des processus, décrits dans des notations telles que BPMN ou les réseaux de Petri, à partir d’une liste d’événements générés par des systèmes informatiques. Les techniques de forage contemporaines sont principalement axées sur les activités et prennent rarement en compte les buts (souvent contradictoires) des parties prenantes. La considération explicit des buts, souvent utilisés en ingénierie des exigences, peut cependant améliorer la rationalité et l'interprétabilité des modèles extraits, et permettre de générer de meilleures opportunités pour satisfaire les parties prenantes. Cette présentation va d’abord souligner certains défis émergents du forage de processus, avec un attention particulière portée aux applications infonuagiques. Certains de ces défis seront adressés à l’aide i) d’un prétraitement amélioré de listes d’événements complexes à l’aide d’un nouvel API et d’une implémentation en R, et ii) d’une nouvelle méthode orientée-but de découverte de modèles de processus (GoPED), qui aligne les modèles découverts et les objectifs des parties prenantes en filtrant les événements qui ne satisfont pas les buts prescrits. GoPED définit trois types de critères (supportés par différents algorithmes) qui suggèrent les niveaux de satisfaction souhaités du point de vue (i) des cas observés, (ii) des objectifs et (iii) de l'organisation. Quelques exemples reliés au domaine de la santé seront utilisés pour illustrer les avantages de l'API de prétraitement proposé et de GoPED.
+ 
 - title: "Verification of flat FIFO systems"
   speaker: "Alain Finkel"
   date: "2019-10-03"
   type: "seminar"
+  abstract: |
+    The decidability and complexity of reachability problems and model-checking for flat counter systems have been explored in detail. However, only few results are known for flat FIFO systems, only in some particular cases (a single loop or a single bounded expression).
+
+    We prove, by establishing reductions between properties, and by reducing  SAT to a subset of these properties that many verification problems like  reachability, non-termination, unboundedness are NP-complete for flat  FIFO systems, generalizing similar existing results for flat counter systems.
+
+    We construct a trace-flattable counter system that is bisimilar to a  given flat FIFO system, which allows to model-check the original flat FIFO system. Our results lay the theoretical foundations and open the way to build a verification tool for (general) FIFO systems based on analysis of flat subsystems.
+
+    The paper has been recently presented at CONCUR 2019 and the complete paper, with all proofs, is on: https://hal.archives-ouvertes.fr/hal-02267453.
 
 - title: "The reachability problem for Petri nets is not elementary"
   speaker: "Filip Mazowiecki"
   date: "2019-05-02"
   type: "seminar"
+  abstract: |
+    Petri nets, also known as vector addition systems, are a long established and widely used model of concurrent processes. The complexity of their reachability problem is one of the most prominent open questions in the theory of verification. That the reachability problem is decidable was established by Mayr in his seminal STOC 1981 work, and the currently best published upper bound is the non-primitive recursive Ackermannian bound of Leroux and Schmitz from LICS 2019. We show that the reachability problem is not elementary. Until this work, the best lower bound has been exponential space, due to Lipton in 1976.
+
+    Joint work with Wojciech Czerwiński, Sławomir Lasota, Ranko Lazić and Jérôme Leroux.
 
 - title: "Parameterized verification of population protocols"
   speaker: "Stefan Jaax"

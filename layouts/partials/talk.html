@@ -1,10 +1,13 @@
 <li>
-  <span style="font-size: 90%; opacity: 80%">{{ time.Format .site.Language.Params.dateFormat .talk.date }}.</span>
-  {{ .talk.speaker }}:
-  {{ if .talk.url }}
-    <a href="{{ .talk.url }}"><em>{{ .talk.title }}</em></a>
-  {{ else }}
-    <em>{{ .talk.title }}</em>
-  {{ end }}
-  {{ if .talk.type }}<span style="font-size: 75%; opacity: 80%">({{ i18n .talk.type }})</span>{{ end }}
+  <details>
+    <summary style="list-style: none; cursor: pointer;">
+      <span style="font-size: 90%; opacity: 80%">{{ time.Format .site.Language.Params.dateFormat .talk.date }}.</span>
+      {{ .talk.speaker }}:
+      <span style="margin-right: 0.25rem;"><em>{{ .talk.title }}</em></span>{{ if .talk.slides }}<a href="{{ .talk.slides }}"><i class="fa-solid fa-file-powerpoint"></i></a>{{ end }}{{ if .talk.video }}<a href="{{ .talk.video }}"><i class="fa-solid fa-video"></i></a>{{ end }}
+      {{ if .talk.type }}<span style="font-size: 75%; opacity: 80%">({{ i18n .talk.type }})</span>{{ end }}
+    </summary>
+    <div class="talk-abstract">
+      {{ .talk.abstract | markdownify}}
+    </div>
+  </details>
 </li>
