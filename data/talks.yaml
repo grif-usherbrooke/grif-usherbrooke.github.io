@@ -38,6 +38,15 @@
 
     In this talk, I will introduce word equations, explain their connection to Hilbert's tenth problem, and provide insights into techniques for solving (quadratic) word equations. 
 
+- title: "Sometimes only fools get it right: When cluster reduction isn't safe"
+  speaker: "Norbert Zeh"
+  date: "2025-05-08"
+  type: "seminar"
+  abstract: |
+    Cluster reduction is a technique that can be used to speed up the construction of phylogenetic networks from sets of trees, or so we thought.  Baroni, Semple, and Steel proved that cluster reduction is safe for 2 trees, that is, it preserves the optimality of the constructed network when the input consists of 2 trees.  While there are inputs where cluster reduction isn’t applicable, Li and Zeh verified experimentally that on 2-tree inputs, it is the single most important technique for constructing optimal networks efficiently in practice, that not using cluster reduction would be folly.  This talk shows that cluster reduction is safe for 3 trees, and briefly mentions how to prove that it is safe also for an arbitrary number of trees if the goal is to compute an optimal tree-child network.  I will also discuss how to prove that without restrictions on the network, cluster reduction is not safe for 10 or more trees.  With a little extra care, the proof also shows that cluster reduction isn’t safe for 10 or more trees when the goal is to find an optimal orchard.  What happens with 4-9 trees is an open problem, but our intuition is that cluster reduction stops being safe already for 4 trees.
+
+    To prove the negative result for 10 trees, we need a set of 5 trees that cannot be displayed by a network with 2n or fewer reticulations, where n is the number of leaves of the input trees.  I will discuss how to show that there exists a set of n^eps trees that cannot be displayed by a network with o(n lg n) reticulations.  This is interesting because Bordewich and Semple showed that there exists even a tree-based network with O(n lg n) reticulations that displays all trees on n leaves. Our result shows that the number of reticulations increases by only a constant factor when going from n^eps trees to all trees.  An extension of this technique that is less fun to discuss in a talk but is based on the same idea proves the result that there exists a set of 5 trees that cannot be displayed by a network with 2n or fewer reticulations.
+
 - title: "Quantum methods for searching, counting, learning, and simulating physics"
   speaker: "Stefanos Kourtis"
   date: "2025-04-02"
@@ -54,15 +63,6 @@
     [4] J. Côté, S. Kourtis, Nat. Commun. 13, 7395 (2022).
 
     [5] X. Feng, J. Côté, S. Kourtis, B. Skinner, arXiv:2502.01735 (2025).
-
-- title: "Sometimes only fools get it right: When cluster reduction isn't safe"
-  speaker: "Norbert Zeh"
-  date: "2025-05-08"
-  type: "seminar"
-  abstract: |
-    Cluster reduction is a technique that can be used to speed up the construction of phylogenetic networks from sets of trees, or so we thought.  Baroni, Semple, and Steel proved that cluster reduction is safe for 2 trees, that is, it preserves the optimality of the constructed network when the input consists of 2 trees.  While there are inputs where cluster reduction isn’t applicable, Li and Zeh verified experimentally that on 2-tree inputs, it is the single most important technique for constructing optimal networks efficiently in practice, that not using cluster reduction would be folly.  This talk shows that cluster reduction is safe for 3 trees, and briefly mentions how to prove that it is safe also for an arbitrary number of trees if the goal is to compute an optimal tree-child network.  I will also discuss how to prove that without restrictions on the network, cluster reduction is not safe for 10 or more trees.  With a little extra care, the proof also shows that cluster reduction isn’t safe for 10 or more trees when the goal is to find an optimal orchard.  What happens with 4-9 trees is an open problem, but our intuition is that cluster reduction stops being safe already for 4 trees.
-
-    To prove the negative result for 10 trees, we need a set of 5 trees that cannot be displayed by a network with 2n or fewer reticulations, where n is the number of leaves of the input trees.  I will discuss how to show that there exists a set of n^eps trees that cannot be displayed by a network with o(n lg n) reticulations.  This is interesting because Bordewich and Semple showed that there exists even a tree-based network with O(n lg n) reticulations that displays all trees on n leaves. Our result shows that the number of reticulations increases by only a constant factor when going from n^eps trees to all trees.  An extension of this technique that is less fun to discuss in a talk but is based on the same idea proves the result that there exists a set of 5 trees that cannot be displayed by a network with 2n or fewer reticulations.
 
 - title: "Protocoles de population: robustesse et composabilité"
   speaker: "Benjamin Courchesne"
