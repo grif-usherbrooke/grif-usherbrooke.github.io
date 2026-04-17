@@ -68,6 +68,13 @@
   speaker: "Benjamin Courchesne"
   date: "2025-03-26"
   type: "club-info"
+  slides: "../slides/courchesne_26-05-25.pdf"
+  abstract: |
+    Les protocoles de population constituent un modèle de calcul distribué. S'inspirant des systèmes biologiques, ce modèle repose sur des agents anonymes, disposant d'une mémoire locale constante et non partagée, qui interagissent aléatoirement pour atteindre des objectifs collectifs.
+
+    Durant cette présentation, nous nous pencherons sur la résilience de ces systèmes face à la présence d'erreurs dans leur état initial. Nous examinerons également si ce nouveau concept de robustesse peut servir de cadre d'évaluation pour des automates soumis à des contraintes semi-linéaires.
+
+    Cette présentation se veut ouverte à toutes et à tous, elle prendra donc le temps de poser les bases requises.
 
 - title: "Résolubilité de réparation minimale de cographe par suppressions d'arêtes"
   speaker: "Francis Sarrazin"
