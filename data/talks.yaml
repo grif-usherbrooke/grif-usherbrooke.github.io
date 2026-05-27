@@ -1,3 +1,14 @@
+- title: "Efficient first-order model checking on graphs via the twin-width parameter"
+  speaker: "Manuel Lafond"
+  date: "2026-06-04"
+  type: "lunch"
+  abstract: |
+    Several algorithmic problems on graphs consist in deciding whether a given first-order (FO) logical formula is true on a given graph, for example, the search for cliques or vertex covers. The model-checking problem is PSPACE-complete and is not believed to be solvable in time better than n^O(k), where k is the size of the formula.
+
+    However, one can exploit the structure of graphs to obtain more efficient algorithms. For instance, any FO formula can be evaluated in time f(k)*n, for some function f, on graphs of constant degree, planar graphs, interval graphs, bounded tree-width graphs, and many other graph classes. Each of these results required non-trivial proofs and ad hoc algorithmic techniques.
+
+    Recently, a new graph parameter called twin-width (tww) has emerged as a "super-parameter" that generalizes all previously mentioned classes. A unifying theorem has shown that FO model checking can be performed in time f(tww,k)*n, and this result simultaneously implies all the previous ones and many more.  In this seminar, I will present the basics of FO formulas on graphs, the main tools of parameterized algorithms, and then the twin-width parameter.
+
 - title: "Phylogenetic Diversity in Networks and with Dependencies"
   speaker: "Jannick Schestag"
   date: "2026-04-20"
