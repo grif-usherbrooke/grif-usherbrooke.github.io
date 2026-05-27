@@ -155,3 +155,9 @@
   role: "bsc"
   area: ["formal"]
   advisor: "Marc Frappier"
+
+- firstname: "Luca"
+  lastname: "Benz"
+  role: "bsc"
+  area: ["quantum"]
+  advisor: "Dave Touchette"
