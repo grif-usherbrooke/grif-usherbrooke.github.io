@@ -161,3 +161,9 @@
   role: "bsc"
   area: ["quantum"]
   advisor: "Dave Touchette"
+
+- firstname: "Marco Antonio"
+  lastname: "Martínez Martínez"
+  role: "bsc"
+  area: ["quantum"]
+  advisor: "Cunlu Zhou"
