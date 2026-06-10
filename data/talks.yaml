@@ -2,7 +2,8 @@
   speaker: "Michael Blondin"
   date: "2026-06-22"
   type: "lunch"
-  abstract: | Population protocols are a well-established model of distributed computing where anonymous agents, with very limited individual computational power, work collectively to achieve a common task. In this model, an input is scattered among agents that interact pairwise and must take a decision by reaching a stable consensus. Population protocols provide a theoretical framework for reasoning about distributed systems such as networks of mobile sensors and chemical reaction networks. Despite their simplicity, they characterize a robust class: the predicates definable in Presburger arithmetic.
+  abstract: |
+    Population protocols are a well-established model of distributed computing where anonymous agents, with very limited individual computational power, work collectively to achieve a common task. In this model, an input is scattered among agents that interact pairwise and must take a decision by reaching a stable consensus. Population protocols provide a theoretical framework for reasoning about distributed systems such as networks of mobile sensors and chemical reaction networks. Despite their simplicity, they characterize a robust class: the predicates definable in Presburger arithmetic.
 
     In this talk, I will introduce the model and discuss its state complexity. In particular, I will present upper and lower bounds for natural predicate families, and survey the current state of the art.
 
