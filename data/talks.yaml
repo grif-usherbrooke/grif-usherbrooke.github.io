@@ -2,6 +2,7 @@
   speaker: "Michael Blondin"
   date: "2026-06-22"
   type: "lunch"
+  slides: "../slides/blondin_22-06-26.pdf"
   abstract: |
     Population protocols are a well-established model of distributed computing where anonymous agents, with very limited individual computational power, work collectively to achieve a common task. In this model, an input is scattered among agents that interact pairwise and must take a decision by reaching a stable consensus. Population protocols provide a theoretical framework for reasoning about distributed systems such as networks of mobile sensors and chemical reaction networks. Despite their simplicity, they characterize a robust class: the predicates definable in Presburger arithmetic.
 
