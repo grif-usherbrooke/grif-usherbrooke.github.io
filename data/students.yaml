@@ -105,7 +105,7 @@
   lastname: "Hooshyar"
   role: "phd"
   area: ["bio"]
-  advisor: "Nadia Tahiri + Manuel Lafond"
+  advisor: "Manuel Lafond and Nadia Tahiri"
   
 
 - firstname: "Érika"
@@ -167,3 +167,15 @@
   role: "bsc"
   area: ["quantum"]
   advisor: "Cunlu Zhou"
+
+- firstname: "Saul"
+  lastname: "Chavez Sanchez"
+  role: "bsc"
+  area: ["bio"]
+  advisor: "Nadia Tahiri"
+
+- firstname: "Zoe"
+  lastname: "Sztandke"
+  role: "bsc"
+  area: ["formal"]
+  advisor: "Nadia Tahiri"
