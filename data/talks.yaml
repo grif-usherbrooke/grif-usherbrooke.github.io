@@ -1,3 +1,14 @@
+- title: "Fondements en intelligence artificielle pour l'automatisation des entreprises : le cas DouAI Solutions"
+  speaker: "Douae Jellal"
+  date: "2026-09-28"
+  type: "lunch"
+  abstract: |
+    Cette présentation explore les fondements théoriques qui sous-tendent la conception de systèmes d'IA appliqués à l'automatisation des entreprises : architectures d'agents conversationnels, méthodes de traitement du langage naturel, modélisation prédictive et principes de conception de pipelines de données et de documents intelligents. 
+    
+    Ces concepts seront mis en perspective à travers DouAI Solutions, une initiative structurée autour de six axes d'expertise (AI Solutions, Data & Analytics, Automation, Predictive AI, Web & Software, Document Intelligence). 
+    
+    À titre d'illustration concrète, un assistant IA conversationnel intégré à un site web sera présenté : il interagit avec les entreprises pour cerner leurs besoins d'automatisation et stocke automatiquement les échanges dans une base de données. Les mandats réalisés ou en cours serviront d'exemples d'application des principes discutés.
+    
 - title: "The Power and Limits of Population Protocols"
   speaker: "Michael Blondin"
   date: "2026-06-22"
