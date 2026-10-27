@@ -179,3 +179,9 @@
   role: "bsc"
   area: ["formal"]
   advisor: "Nadia Tahiri"
+
+- firstname: "Baptiste"
+  lastname: "Diedler"
+  role: "msc"
+  area: ["formal"]
+  advisor: "Michael Blondin"
