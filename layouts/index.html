@@ -24,6 +24,7 @@
   {{ range slice "postdoc" "phd" "msc" "bsc" }}
     {{ $role := . }}
     {{ $filtered := where $students "role" $role }}
+    {{ $filtered = where $filtered "alumni" "ne" true }}
     {{ $filtered = sort $filtered "lastname" }}
     {{ $withKey := slice }}
     {{ range $filtered }}

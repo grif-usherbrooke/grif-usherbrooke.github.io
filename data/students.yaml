@@ -58,12 +58,14 @@
   role: "bsc"
   area: ["formal"]
   advisor: "Michael Blondin"
+  alumni: true
 
 - firstname: "Pierre-Étienne"
   lastname: "Brindle"
   role: "bsc"
   area: ["quantum"]
   advisor: "Dave Touchette"
+  alumni: true
 
 - firstname: "Elham"
   lastname: "Torabian"
@@ -161,6 +163,7 @@
   role: "bsc"
   area: ["quantum"]
   advisor: "Dave Touchette"
+  alumni: true
 
 - firstname: "Marco Antonio"
   lastname: "Martínez Martínez"
