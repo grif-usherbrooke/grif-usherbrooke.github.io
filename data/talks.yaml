@@ -1,3 +1,12 @@
+- title: "Algorithme de recherche quantique pour l’arrondi correct"
+  speaker: "Stefanos Kourtis"
+  date: "2026-11-02"
+  type: "lunch"
+  abstract: |
+    Nous montrons que la recherche quantique peut être utilisée pour calculer la difficulté d’arrondi d’une fonction élémentaire, c’est-à-dire pour déterminer la précision minimale nécessaire afin de calculer les valeurs d’une fonction élémentaire correctement arrondies à une précision cible de n chiffres, pour toutes les entrées possibles en virgule flottante de précision n dans un intervalle donné. Pour une fonction élémentaire f liée à la fonction exponentielle, la recherche quantique s’effectue en temps Õ(2^{n/2} log(1/δ)) et retourne, avec une probabilité 1-δ, la difficulté d’arrondi de f sur l’ensemble des entrées en virgule flottante de n bits dans une binade donnée. Pour les fonctions élémentaires périodiques dans de grandes binades, la recherche quantique procure une accélération asymptotique par rapport aux meilleurs algorithmes classiques et heuristiques connus.
+
+    Référence: https://arxiv.org/abs/2601.13306
+
 - title: "Fondements en intelligence artificielle pour l'automatisation des entreprises : le cas DouAI Solutions"
   speaker: "Douae Jellal"
   date: "2026-09-28"
